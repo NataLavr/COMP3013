@@ -51,3 +51,12 @@
   background: #808080;
 }
 
+
+.popup {
+  display: flex;
+  position: absolute;
+  top: 54px;
+  left: 50%;
+}
+
+

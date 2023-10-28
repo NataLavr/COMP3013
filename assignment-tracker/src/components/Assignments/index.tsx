@@ -1,10 +1,15 @@
 import { Assignment } from "../Assignment";
 import styles from "./assignments.module.css";
 
+type Date = {
+  value: string;
+}
+
 type AssignmentsProps = {
-    inputAssignments: { 
+  inputAssignments: { 
     title: string; 
-    completed: boolean 
+    completed: boolean; 
+    dueDate?: Date;
   }[];
 
   deleteAssignment: (index: number) => void;
@@ -21,13 +26,11 @@ export function Assignments({ inputAssignments, deleteAssignment, completeAssign
           <p>Created Assignments</p>
           <span>{inputAssignments.length}</span>
         </div>
-
         <div>
           <p className={styles.textPurple}>Completed Assignments</p>
           <span>{completedCount} of {inputAssignments.length}</span>
         </div>
       </header>
-
       <div className={styles.list}>
         {inputAssignments.map((assignment, index) => (
           <Assignment

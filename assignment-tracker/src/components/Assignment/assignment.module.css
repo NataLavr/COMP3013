@@ -47,3 +47,11 @@ p.textCompleted {
   border: none;
   color: #808080;
 }
+
+.calendar {
+  background-color: #5e60ce;
+}
+
+.due {
+  color: rgb(214, 88, 88);
+}
